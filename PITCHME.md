@@ -38,6 +38,8 @@ sub staticScope {
 }
 print staticScope(); # $a de foo ("global")
 ```
++++
+
 Resultado:
 ```
 static
@@ -60,21 +62,8 @@ print staticScope();
 ```
 ¿Resultado?
 
----
-## Modifiquemos un poco nuestro programa
-```perl
-$a = "global"; # Asignación de $a = "global"
-sub foo {
-  print $a . "\n"; # Asignación de $a = "global"
-  return $a;
-}
-sub staticScope {
-  my $a = "static";  # Asignación de $a = "static"
-  print $a . "\n";
-  return foo();
-}
-print staticScope();
-```
++++
+
 Resultado:
 ```
 static
@@ -96,7 +85,7 @@ sub staticScope {
 }
 print staticScope();
 ```
-
++++
 ```perl
 $a = "global";
 $a = "static"; # staticScope
@@ -139,6 +128,8 @@ sub dynamicScope {
 print dynamicScope();
 ```
 
++++
+
 Resultado:
 
 ```
@@ -162,21 +153,8 @@ print dynamicScope();
 ```
 ¿Resultado?
 
----
-## Modifiquemos un poco nuestro programa
-```perl
-$b = "global"; # Asignación de $b = "global"
-sub bar {
-  print $b . "\n" # Asignación de $b = "global"
-  return $b;
-}
-sub dynamicScope {
-  local $b = "dynamic"; # Asignación de $b = "dynamic"
-  print $b . "\n";
-  return bar(); # Pasa el valor de $b a la función bar
-}
-print dynamicScope();
-```
++++
+
 Resultado:
 
 ```
@@ -199,6 +177,7 @@ sub dynamicScope {
 }
 print dynamicScope();
 ```
++++
 
 ```perl
 $b = "global";
@@ -207,6 +186,7 @@ print $b . "\n";
 print $b . "\n"; # bar
 print $b; # fuera
 ```
+---
 ## Modifiquemos un poco nuestro programa (nuevamente)
 ```perl
 $b = "global";
@@ -222,6 +202,9 @@ sub dynamicScope {
 print dynamicScope() . "\n";
 print $b; # Modificación (static)
 ```
+
++++
+
 Resultado:
 
 ```
