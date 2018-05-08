@@ -64,28 +64,29 @@ Es el orden que sigue la ejecución de un programa, con el fin de cumplir la tar
 
 ### Operadores
 
-<ul align="left">
-<li class="fragment">
-  <strong>Prefijos:</strong>
-  <ul>
-    <li><em>op</em> a b</li>
-    <li><em>op</em> (a, b)</li>
-    <li>(<em>op</em> a b)</li>
-  </ul>
-</li>
-<li class="fragment">
-  <strong>Infijos:</strong>
-  <ul>
-    <li>a <em>op</em> b</li>
-  </ul>
-</li>
-<li class="fragment">
-  <strong>Sufijos:</strong>
-  <ul>
-    <li>a b <em>op</em></li>
-  </ul>
-</li>
 
+<ul align="left">
+  <li class="fragment">
+    <strong>Prefijos:</strong>
+    <ul>
+      <li><em>op</em> a b</li>
+      <li><em>op</em> (a, b)</li>
+      <li>(<em>op</em> a b)</li>
+    </ul>
+  </li>
+  <li class="fragment">
+    <strong>Infijos:</strong>
+    <ul>
+      <li>a <em>op</em> b</li>
+    </ul>
+  </li>
+  <li class="fragment">
+    <strong>Sufijos:</strong>
+    <ul>
+      <li>a b <em>op</em></li>
+    </ul>
+  </li>
+</ul>
 ---
 
 ### Precedencia y asociatividad
@@ -106,3 +107,5 @@ Es el orden que sigue la ejecución de un programa, con el fin de cumplir la tar
 @fa[arrow-down]
 
 +++
+
+![Image-Absolute](assets/Precedencia.png)
