@@ -8,7 +8,7 @@ Daniel Pavez - Victor Reyes
 ---
 ## Scope estático
 ---
-### Código de ejemplo :
+### Código de ejemplo
 
 ```perl
 $a = "global";
@@ -43,7 +43,7 @@ print staticScope(); # $a de foo ("global")
 
 +++
 
-#### Resultado:
+#### Resultado
 ```
 static
 global
@@ -67,7 +67,7 @@ print staticScope();
 
 +++
 
-#### Resultado:
+#### Resultado
 ```
 static
 global
@@ -102,7 +102,7 @@ print $a; # fuera
 ---
 ## Scope dinámico
 ---
-### Código de ejemplo:
+### Código de ejemplo
 ```perl
 $b = "global";
 sub bar {
@@ -136,7 +136,7 @@ print dynamicScope();
 
 +++
 
-#### Resultado:
+#### Resultado
 
 ```
 dynamic
@@ -161,7 +161,7 @@ print dynamicScope();
 
 +++
 
-#### Resultado:
+#### Resultado
 
 ```
 dynamic
@@ -214,7 +214,7 @@ print $b; # Modificación (static)
 
 +++
 
-#### Resultado:
+#### Resultado
 
 ```
 dynamic
