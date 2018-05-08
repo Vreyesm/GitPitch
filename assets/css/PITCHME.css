@@ -2,3 +2,7 @@
   border: 0;
   box-shadow: none;
 }
+
+.reveal pre code {
+  font-size: 0.6em
+}
