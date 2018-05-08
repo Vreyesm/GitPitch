@@ -141,6 +141,8 @@ if (*p && p->foo)
 if (f || messy())
 ```
 
+---
+
 ### Variables como valor y variables como referencia
 
 @ul
