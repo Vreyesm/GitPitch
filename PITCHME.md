@@ -14,23 +14,25 @@ Es el orden que sigue la ejecución de un programa, con el fin de cumplir la tar
 
 ### Categorías de mecanismos utilizados
 
-@ol
-
 - *Secuenciamiento:* El orden en que se ejecutan las sentencias o se evaluan las expresiones (usualmente en el orden en que aparecen en el código del programa).
-- *Selección:* Dependiendo de alguna condición en tiempo de ejecución, se realiza una elección entre dos sentencias o expresiones. Los casos más comunes son las sentencias `if` y `case (switch)`.
-
-@olend
 
 @fa[arrow-down]
 
 +++
 
-@ol
+- *Selección:* Dependiendo de alguna condición en tiempo de ejecución, se realiza una elección entre dos sentencias o expresiones. Los casos más comunes son las sentencias `if` y `case (switch)`.
+
+@fa[arrow-down]
+
++++
 
 - *Iteración:* Ejecución repetitiva de un cierto fragmento de código, ya sea un cierto número de veces o hasta que una condición (en tiempo de ejecución) sea verdadera. Incluyen las sentencias `for`, `while` y `repeat`.
-- *Abstracción procedural:* Un conjunto de constructos potencialmente complejos (una subrutina) son encapsulados, con el fin de ser tratados como única unidad, usualmente sujeta a la parametrización.
 
-@olend
+@fa[arrow-down]
+
++++
+
+- *Abstracción procedural:* Un conjunto de constructos potencialmente complejos (una subrutina) son encapsulados, con el fin de ser tratados como única unidad, usualmente sujeta a la parametrización.
 
 @fa[arrow-down]
 
@@ -41,6 +43,7 @@ Es el orden que sigue la ejecución de un programa, con el fin de cumplir la tar
 @fa[arrow-down]
 
 +++
+
 - *Concurrencia*: Dos o más fragmentos de un programa que son ejecutados/evaluados "al mismo tiempo", ya sea en paralelo utilizando procesadores separados o intercalados en un único procesado, con el fin de conseguir el mismo efecto.
 
 @fa[arrow-down]
@@ -52,6 +55,7 @@ Es el orden que sigue la ejecución de un programa, con el fin de cumplir la tar
 @fa[arrow-down]
 
 +++
+
 - *Indeterminación:* El orden o elección de las sentencias o expresiones se dejan deliberadamente sin especificar, dando a entender que cualquier alternativa llevará a un resutlado correcto. Algunos lenguajes requieren que la elección de aleatoria o pareja, en el sentido formal de la palabra.
 
 ---
