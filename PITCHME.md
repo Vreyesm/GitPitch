@@ -1,14 +1,14 @@
 ## Lenguajes y Paradigmas de Programación
-### Ayudantía: Scope estático y dinámico
+### Scope estático y dinámico
 
 <br>
 
 Daniel Pavez - Victor Reyes
 
 ---
-# Scope estático
+## Scope estático
 ---
-## Código de ejemplo :
+### Código de ejemplo :
 
 ```perl
 $a = "global";
@@ -23,7 +23,7 @@ sub staticScope {
 print staticScope();
 ```
 ---
-## ¿Cómo funciona?
+### ¿Cómo funciona?
 
 Un binding estático ocurre antes del tiempo de ejecución y se mantiene sin cambios a lo largo de dicha ejecución.
 
@@ -39,15 +39,17 @@ sub staticScope {
 }
 print staticScope(); # $a de foo ("global")
 ```
+@fa[arrow-down]
+
 +++
 
-Resultado:
+#### Resultado:
 ```
 static
 global
 ```
 ---
-## Modifiquemos un poco nuestro programa
+### Modifiquemos un poco nuestro programa
 ```perl
 $a = "global";
 sub foo {
@@ -61,18 +63,18 @@ sub staticScope {
 }
 print staticScope();
 ```
-¿Resultado?
+@fa[arrow-down]
 
 +++
 
-Resultado:
+#### Resultado:
 ```
 static
 global
 global
 ```
 ---
-## Equivalencia
+### Equivalencia
 ```perl
 $a = "global";
 sub foo {
@@ -86,6 +88,8 @@ sub staticScope {
 }
 print staticScope();
 ```
+@fa[arrow-down]
+
 +++
 ```perl
 $a = "global";
@@ -96,9 +100,9 @@ print $a . "\n";
 print $a; # fuera
 ```
 ---
-# Scope dinámico
+## Scope dinámico
 ---
-## Código de ejemplo :
+### Código de ejemplo:
 ```perl
 $b = "global";
 sub bar {
@@ -112,7 +116,7 @@ sub dynamicScope {
 print dynamicScope();
 ```
 ---
-## ¿Cómo funciona?
+### ¿Cómo funciona?
 
 Un binding es dinámico si ocurre durante el tiempo de ejecución o puede cambiar en el transcurso de dicha ejecución.
 
@@ -128,17 +132,18 @@ sub dynamicScope {
 }
 print dynamicScope();
 ```
+@fa[arrow-down]
 
 +++
 
-Resultado:
+#### Resultado:
 
 ```
 dynamic
 dynamic
 ```
 ---
-## Modifiquemos un poco nuestro programa
+### Modifiquemos un poco nuestro programa
 ```perl
 $b = "global";
 sub bar {
@@ -152,11 +157,11 @@ sub dynamicScope {
 }
 print dynamicScope();
 ```
-¿Resultado?
+@fa[arrow-down]
 
 +++
 
-Resultado:
+#### Resultado:
 
 ```
 dynamic
@@ -164,7 +169,7 @@ dynamic
 dynamic
 ```
 ---
-## Equivalencia
+### Equivalencia
 ```perl
 $b = "global";
 sub bar {
@@ -178,6 +183,8 @@ sub dynamicScope {
 }
 print dynamicScope();
 ```
+@fa[arrow-down]
+
 +++
 
 ```perl
@@ -188,7 +195,7 @@ print $b . "\n"; # bar
 print $b; # fuera
 ```
 ---
-## Modifiquemos un poco nuestro programa (nuevamente)
+### Modifiquemos un poco nuestro programa (nuevamente)
 ```perl
 $b = "global";
 sub bar {
@@ -203,10 +210,11 @@ sub dynamicScope {
 print dynamicScope() . "\n";
 print $b; # Modificación (static)
 ```
+@fa[arrow-down]
 
 +++
 
-Resultado:
+#### Resultado:
 
 ```
 dynamic
