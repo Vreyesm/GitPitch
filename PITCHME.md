@@ -64,6 +64,8 @@ Es el orden que sigue la ejecución de un programa, con el fin de cumplir la tar
 
 ### Operadores
 
+<div align="left">
+
 - **Prefijos:**
   - *op* a b
   - *op* (a, b)
@@ -75,19 +77,23 @@ Es el orden que sigue la ejecución de un programa, con el fin de cumplir la tar
 - **Sufijos:**
   - a b *op*
 
+</div>
 ---
 
 ### Precedencia y asociatividad
+
+@ul
 
 - **Precedencia:** En ausencia de paréntesis, especifica el orden en son agrupadas las operaciones, siendo las de mayor precedencia las primeras en se agrupadas.
 
 - **Asociatividad:** Especifica si una secuencia de operadores de la misma precedencia son agrupados hacia la izquierda o hacia la derecha.
 
-<br>
 
 - *Importantes cuando se utilizan operadores infijos.*
 - *Cada lenguaje tiene su propia definición para la precedencia y asociatividad de sus operadores.*
 - *Si no está seguro, haga uso de paréntesis.*
+
+@ulend
 
 @fa[arrow-down]
 
