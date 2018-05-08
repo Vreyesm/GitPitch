@@ -64,20 +64,28 @@ Es el orden que sigue la ejecución de un programa, con el fin de cumplir la tar
 
 ### Operadores
 
-<div align="left">
+<ul align="left">
+<li class="fragment">
+  <strong>Prefijos:</strong>
+  <ul>
+    <li><em>op</em> a b</li>
+    <li><em>op</em> (a, b)</li>
+    <li>(<em>op</em> a b)</li>
+  </ul>
+</li>
+<li class="fragment">
+  <strong>Infijos:</strong>
+  <ul>
+    <li>a <em>op</em> b</li>
+  </ul>
+</li>
+<li class="fragment">
+  <strong>Sufijos:</strong>
+  <ul>
+    <li>a b <em>op</em></li>
+  </ul>
+</li>
 
-- **Prefijos:**
-  - *op* a b
-  - *op* (a, b)
-  - (*op* a b)
-
-- **Infijos:**
-  - a *op* b
-
-- **Sufijos:**
-  - a b *op*
-
-</div>
 ---
 
 ### Precedencia y asociatividad
