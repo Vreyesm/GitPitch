@@ -93,9 +93,8 @@ print staticScope();
 +++
 ```perl
 $a = "global";
-$a = "static"; # staticScope
-print $a . "\n";
-$a = "global"; # foo
+$a2 = "static"; # staticScope
+print $a2 . "\n";
 print $a . "\n";
 print $a; # fuera
 ```
