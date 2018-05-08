@@ -1,4 +1,5 @@
-## Scope estático y dinámico
+## Lenguajes y Paradigmas de Programación
+### Ayudantía: Scope estático y dinámico
 
 <br>
 
@@ -15,7 +16,7 @@ sub foo {
   return $a;
 }
 sub staticScope {
-  my $a = "static"; # lexical (static)
+  my $a = "static";
   print $a . "\n";
   return foo();
 }
@@ -141,7 +142,7 @@ dynamic
 ```perl
 $b = "global";
 sub bar {
-  print $b . "\n"
+  print $b . "\n" # Modificación
   return $b;
 }
 sub dynamicScope {
