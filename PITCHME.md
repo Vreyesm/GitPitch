@@ -171,7 +171,7 @@ if (f || messy())
 
 ### Lenguajes orientados a expresiones y orientados a sentencias (o declaraciones)
 
-**Diferencia entre expresión y sentencia:** Una expresión sólo contiene identificadores, literales y operadores, y retornan un valor. En cambio, una sentencia expresa una acción que se debe llevar a cabo e incluye a las expresiones.
+**Diferencia entre expresión y sentencia:** Una expresión sólo contiene identificadores, literales y operadores, y retornan un valor. En cambio, una sentencia expresa una acción que se debe llevar a cabo. Además, existen las sentancias-expresiones, las cuales permiten el uso de expresiones en una sentencia.
 
 @fa[arrow-down]
 
@@ -219,6 +219,7 @@ if (f || messy())
   - Forma sufija.
 
 @ulend
+
 ---
 
 ### Efectos secundarios
