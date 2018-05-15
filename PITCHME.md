@@ -175,7 +175,7 @@ u :alink
 - Elección de como "actuar" al operar sobre variables de tipos diferentes.
 - Determinar si es posible operar dichas variables (compatibilidad).
 - Puede estar basada en los operadores utilizados o tomar en cuenta los tipos del contexto.
-- El resultado de la operación puede ser de un tipo distinto al de alguno de los operandos (transformación implícita, a diferencia de la conversión de tipos que es explícita, comúnmente por medio de *casteo*).
+- El resultado de la operación puede ser de un tipo distinto al de alguno de los operandos (transformación implícita,en cambio la conversión de tipos que es explícita (*casteo*)).
 
 @ulend
 
@@ -189,12 +189,12 @@ Transformar las siguientes expresiones a su forma prefija y sufija.
 @ol
 
 - A+B
-- -A+B  +B-A A-B+
-- A+B*C
-- C*(A+B)
+- -A+B
+- A+B\*C
+- C\*(A+B)
 - (A+B^C)
 - D+E^5
-- (A+B^C)*D+E^5
+- (A+B^C)\*D+E^5
 
 @olend
 
