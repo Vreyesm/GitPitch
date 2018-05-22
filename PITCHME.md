@@ -18,7 +18,7 @@ Daniel Pavez - Victor Reyes
 
 +++
 
-### Clases y Objetos - Ejemplo
+#### Clases y Objetos - Ejemplo
 
 ```Java
 class Cuadrado {
@@ -62,7 +62,7 @@ public class Main {
 @fa[arrow-down]
 
 +++
-### Encapsulamiento - Niveles de Acceso
+#### Encapsulamiento - Niveles de Acceso
 
 <table>
   <tr>
@@ -102,8 +102,8 @@ public class Main {
   </tr>
 </table>
 
----
-### Encapsulamiento - Ejemplo
++++
+#### Encapsulamiento - Ejemplo
 
 ```Java
 class Lapiz {
@@ -135,7 +135,7 @@ public class Main {
 @[1-15] (Definición de la clase `Lapiz`.)
 @[2] (Variable `color` con modificador `private`.)
 @[8-14] (Métodos públicos que permiten la lectura y escritura desde el exterior de la clase.)
-@[20,22] (Uso del método `getColor()` para leer el valor de la variable privada `color`.)
+@[20,22] (Uso del método `getColor()` para leer la variable privada `color`.)
 @[21] (Uso del método `setColor()` para escribir en la variable privada `color`.)
 
 ---
@@ -152,7 +152,7 @@ public class Main {
 
 +++
 
-### Ejemplo de Herencia
+#### Herencia - Ejemplo
 
 ```Java
 class Persona {
@@ -207,13 +207,117 @@ public class Main {
 ---
 ### Abstracción
 
+@ul
 
+- Ocultar los detalles de implementación.
+- Lo que es importante conocer es "qué" realiza el objeto, no el "cómo" (caja negra).
+- Uso de clases abstractas e interfaces en Java, las cuales no se pueden instanciar.
+- Concepto de *clase abstracta* y *clase concreta*.
+
+@ulend
 
 @fa[arrow-down]
 
 +++
 
-### Ejemplo de Abstracción
+#### Abstracción - Ejemplo 1
+
+```Java
+abstract class Persona {
+  public String nombre;
+  public int edad;
+
+  public Persona(String nombre, int edad) {
+    this.nombre = nombre;
+    this.edad = edad;
+  }
+
+  public abstract void hablar();
+}
+
+class Estudiante extends Persona {
+  public String matricula;
+
+  public Estudiante(String nombre, int edad, String matricula) {
+    super(nombre, edad);
+    this.matricula = matricula;
+  }
+
+  public void hablar() {
+    //super.hablar();
+    System.out.println("Hola, me llamo " + this.nombre + ", tengo " + this.edad + " años.");
+    System.out.println("Además, soy un Estudiante y mi número de matrícula es: " + this.matricula);
+  }
+}
+
+public class Main {
+  public static void main(String[] args) {
+    Persona estudiante = new Estudiante("Daniel", 23, "2014407002");
+    estudiante.hablar();
+    //Persona persona = new Persona("Juan", 20);
+  }
+}
+```
+
+@[1-11] (Definición de la clase `Persona`.)
+@[1] (Ahora `Persona` es una clase abstracta.)
+@[10] (El método `hablar()` también es abstracto.)
+@[13-26] (Definición de la clase `Estudiante`.)
+@[17] (Aún podemos utilizar el constructor de la clase padre.)
+@[21-25] (Implementación del método abstracto `hablar()`.)
+@[28-34] (Programa principal.)
+@[30] (Creación del objeto `estudiante`.)
+@[31] (Llamada a la implementación del método `hablar()`.)
+@[32] (Dado que `Persona` es una clase abstracta, no se puede instanciar.)
+
+---
+#### Abstracción - Ejemplo 2
+
+```Java
+interface Persona {
+  public String nombre = "Daniel";
+
+  public void hablar();
+}
+
+class Estudiante implements Persona {
+  public int edad;
+  public String matricula;
+
+  public Estudiante(int edad, String matricula) {
+    //super(nombre, edad);
+    this.edad = edad;
+    this.matricula = matricula;
+  }
+
+  public void hablar() {
+    //super.hablar();
+    System.out.println("Hola, me llamo " + this.nombre + ", tengo " + this.edad + " años.");
+    System.out.println("Además, soy un Estudiante y mi número de matrícula es: " + this.matricula);
+  }
+}
+
+public class Main {
+  public static void main(String[] args) {
+    Persona estudiante = new Estudiante(23, "2014407002");
+    estudiante.hablar();
+    //Persona persona = new Persona("Juan", 20);
+  }
+}
+```
+
+@[1-5] (Definición de la *interfaz* `Persona`.)
+@[2] (Se pueden definir constantes (final) pero no variables.)
+@[4] (Método que debe implementar una *clase hija*.)
+@[7-22] (Definición de la clase `Estudiante`.)
+@[7] (Uso de `implements` en vez de `extends`.)
+@[8,9] (Variables de `Estudiente`.)
+@[12] (La clase padre ya no tiene un constructor.)
+@[17-21] (Implementación del método `hablar()`.)
+@[24-30] (Programa principal.)
+@[26] (Creación del objeto `estudiante`.)
+@[27] (Llamada a la implementación del método `hablar()`.)
+@[28] (Dado que `Persona` es una *interfaz*, no se puede instanciar.)
 
 ---
 ### Polimorfismo
@@ -222,6 +326,6 @@ public class Main {
 
 +++
 
-### Ejemplo
+#### Polimorfismo - Ejemplo
 
 ---
