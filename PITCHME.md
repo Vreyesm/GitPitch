@@ -6,8 +6,6 @@
 Daniel Pavez - Victor Reyes
 
 ---
-## Conceptos principales
----
 ### Clases y Objetos
 
 @ul
@@ -20,7 +18,7 @@ Daniel Pavez - Victor Reyes
 
 +++
 
-### Ejemplo de Clases y Objetos
+### Clases y Objetos - Ejemplo
 
 ```Java
 class Cuadrado {
@@ -50,12 +48,102 @@ public class Main {
 @[16] (Uso del método `area()`, definido en la clase `Cuadrado`.)
 
 ---
+## Conceptos Fundamentales
+---
+### Encapsulamiento
+
+@ul
+
+- Controlar la lectura y escritura de las variables de un objeto.
+- Uso de los modificadores `public`, `private` y `protected` en Java.
+
+@ulend
+
+@fa[arrow-down]
+
++++
+### Encapsulamiento - Niveles de Acceso
+
+<table>
+  <tr>
+    <th>Modifier</th>
+    <th>Class</th>
+    <th>Package</th>
+    <th>Subclass</th>
+    <th>World</th>
+  </tr>
+  <tr>
+    <td><b>public</b></td>
+    <td>Y</td>
+    <td>Y</td>
+    <td>Y</td>
+    <td>Y</td>
+  </tr>
+  <tr class="fragment">
+    <td><b>protected</b></td>
+    <td>Y</td>
+    <td>Y</td>
+    <td>Y</td>
+    <td>N</td>
+  </tr>
+  <tr class="fragment">
+    <td><i>no modifier</i></td>
+    <td>Y</td>
+    <td>Y</td>
+    <td>N</td>
+    <td>N</td>
+  </tr>
+  <tr class="fragment">
+    <td><b>private</b></td>
+    <td>Y</td>
+    <td>N</td>
+    <td>N</td>
+    <td>N</td>
+  </tr>
+</table>
+
+### Encapsulamiento - Ejemplo
+
+```Java
+class Lapiz {
+  private String color;
+
+  public Lapiz(String color) {
+    this.color = color;
+  }
+
+  public void setColor(String color) {
+    this.color = color;
+  }
+
+  public String getColor() {
+    return this.color;
+  }
+}
+
+public class Main {
+ public static void main(String[] args) {
+   Lapiz lapiz = new Lapiz("negro");
+   System.out.println("El color del lápiz es: " + lapiz.getColor());
+   lapiz.setColor("rojo");
+   System.out.println("El color del lápiz es: " + lapiz.getColor());
+ }
+}
+```
+
+@[1-15] (Definición de la clase `Lapiz`.)
+@[2] (Variable `color` con modificador `private`.)
+@[8-14] (Métodos públicos que permiten la lectura y escritura desde el exterior de la clase.)
+@[20,22] (Uso del método `getColor()` para leer el valor de la variable privada `color`.)
+@[21] (Uso del método `setColor()` para escribir en la variable privada `color`.)
+
+---
 ### Herencia
 
 @ul
 
 - Proceso por el cual una clase (*subclase*) adquiere las propiedades (atributos y/o métodos) de otra (*superclase*).
-- Con el uso de herencia la información se puede manejar en orden jerárquico.
+- Con el uso de herencia, la información se puede manejar en orden jerárquico.
 
 @ulend
 
@@ -125,16 +213,6 @@ public class Main {
 +++
 
 ### Ejemplo de Abstracción
-
----
-### Encapsulamiento
-
-@fa[arrow-down]
-
-+++
-
-### Ejemplo de Encapsulamiento
-
 
 ---
 ### Polimorfismo
