@@ -271,7 +271,7 @@ public class Main {
 @[31] (Llamada a la implementación del método `hablar()`.)
 @[32] (Dado que `Persona` es una clase abstracta, no se puede instanciar.)
 
----
++++
 #### Abstracción - Ejemplo 2
 
 ```Java
@@ -328,7 +328,7 @@ public class Main {
 
 - La habilidad de un objeto de *cambiar de formas*.
 - El uso más común ocurre cuando se utiliza la referencia de una *clase padre* para referirse a un objeto de una de sus *clases hijas*.
-- Cualquier objeto que pase más de una prueba ES-UN es considerado polimórfico (en Java todos los objetos son polimórficos, ya que pasan la prueba ES-UN con su propia clase y con la clase `Object`).
+- Cualquier objeto que pase más de una prueba ES-UN es considerado polimórfico (en Java todos los objetos son polimórficos).
 - Concepto de métodos virtuales: Permitir la sobre-escritura de un método de una *clase padre* por parte de una *clase hija*.
 
 @ulend
