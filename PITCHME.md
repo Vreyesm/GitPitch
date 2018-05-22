@@ -74,34 +74,35 @@ public class Main {
   </tr>
   <tr>
     <td><b>public</b></td>
-    <td>Y</td>
-    <td>Y</td>
-    <td>Y</td>
-    <td>Y</td>
+    <td style="text-align:center">Y</td>
+    <td style="text-align:center">Y</td>
+    <td style="text-align:center">Y</td>
+    <td style="text-align:center">Y</td>
   </tr>
   <tr class="fragment">
     <td><b>protected</b></td>
-    <td>Y</td>
-    <td>Y</td>
-    <td>Y</td>
-    <td>N</td>
+    <td style="text-align:center">Y</td>
+    <td style="text-align:center">Y</td>
+    <td style="text-align:center">Y</td>
+    <td style="text-align:center">N</td>
   </tr>
   <tr class="fragment">
     <td><i>no modifier</i></td>
-    <td>Y</td>
-    <td>Y</td>
-    <td>N</td>
-    <td>N</td>
+    <td style="text-align:center">Y</td>
+    <td style="text-align:center">Y</td>
+    <td style="text-align:center">N</td>
+    <td style="text-align:center">N</td>
   </tr>
   <tr class="fragment">
     <td><b>private</b></td>
-    <td>Y</td>
-    <td>N</td>
-    <td>N</td>
-    <td>N</td>
+    <td style="text-align:center">Y</td>
+    <td style="text-align:center">N</td>
+    <td style="text-align:center">N</td>
+    <td style="text-align:center">N</td>
   </tr>
 </table>
 
+---
 ### Encapsulamiento - Ejemplo
 
 ```Java
