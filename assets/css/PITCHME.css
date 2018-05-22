@@ -1,0 +1,8 @@
+.reveal section img {
+  border: 0;
+  box-shadow: none;
+}
+
+.slides p, .slides li {
+  font-size: 80% !important;
+}
