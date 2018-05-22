@@ -179,7 +179,7 @@ class Estudiante extends Persona {
 
   public void hablar() {
     super.hablar();
-    System.out.println("Además, soy un Estudiante y mi número de matrícula es: " + this.matricula);
+    System.out.println("Soy un Estudiante y mi número de matrícula es: " + this.matricula);
   }
 }
 
@@ -246,7 +246,7 @@ class Estudiante extends Persona {
   public void hablar() {
     //super.hablar();
     System.out.println("Hola, me llamo " + this.nombre + ", tengo " + this.edad + " años.");
-    System.out.println("Además, soy un Estudiante y mi número de matrícula es: " + this.matricula);
+    System.out.println("Soy un Estudiante y mi número de matrícula es: " + this.matricula);
   }
 }
 
@@ -260,10 +260,11 @@ public class Main {
 ```
 
 @[1-11] (Definición de la clase `Persona`.)
-@[1] (Ahora `Persona` es una clase abstracta.)
-@[10] (El método `hablar()` también es abstracto.)
+@[1] (Ahora `Persona` es una *clase abstracta*.)
+@[10] (El método `hablar()` también es *abstracto*.)
 @[13-26] (Definición de la clase `Estudiante`.)
-@[17] (Aún podemos utilizar el constructor de la clase padre.)
+@[17] (Aún podemos utilizar el constructor de la *clase padre*.)
+@[22] (El método `hablar()` no esta implementado en la *clase padre*.)
 @[21-25] (Implementación del método abstracto `hablar()`.)
 @[28-34] (Programa principal.)
 @[30] (Creación del objeto `estudiante`.)
@@ -293,7 +294,7 @@ class Estudiante implements Persona {
   public void hablar() {
     //super.hablar();
     System.out.println("Hola, me llamo " + this.nombre + ", tengo " + this.edad + " años.");
-    System.out.println("Además, soy un Estudiante y mi número de matrícula es: " + this.matricula);
+    System.out.println("Soy un Estudiante y mi número de matrícula es: " + this.matricula);
   }
 }
 
@@ -311,9 +312,10 @@ public class Main {
 @[4] (Método que debe implementar una *clase hija*.)
 @[7-22] (Definición de la clase `Estudiante`.)
 @[7] (Uso de `implements` en vez de `extends`.)
-@[8,9] (Variables de `Estudiente`.)
+@[8,9] (Variables de `Estudiante`.)
 @[12] (La clase padre ya no tiene un constructor.)
 @[17-21] (Implementación del método `hablar()`.)
+@[18] (El método `hablar()` no esta implementado en la *clase padre*.)
 @[24-30] (Programa principal.)
 @[26] (Creación del objeto `estudiante`.)
 @[27] (Llamada a la implementación del método `hablar()`.)
@@ -322,10 +324,86 @@ public class Main {
 ---
 ### Polimorfismo
 
+@ul
+
+- La habilidad de un objeto de *cambiar de formas*.
+- El uso más común ocurre cuando se utiliza la referencia de una *clase padre* para referirse a un objeto de una de sus *clases hijas*.
+- Cualquier objeto que pase más de una prueba ES-UN es considerado polimórfico (en Java todos los objetos son polimórficos, ya que pasan la prueba ES-UN con su propia clase y con la clase `Object`).
+- Concepto de métodos virtuales: Permitir la sobre-escritura de un método de una *clase padre* por parte de una *clase hija*.
+
+@ulend
+
 @fa[arrow-down]
 
 +++
 
 #### Polimorfismo - Ejemplo
 
----
+```Java
+class Persona {
+  public String nombre;
+  public int edad;
+
+  public Persona(String nombre, int edad) {
+    this.nombre = nombre;
+    this.edad = edad;
+  }
+
+  public void hablar() {
+    System.out.println("Hola, me llamo " + this.nombre + ", tengo " + this.edad + " años.");
+  }
+}
+
+class Estudiante extends Persona {
+  public String matricula;
+
+  public Estudiante(String nombre, int edad, String matricula) {
+    super(nombre, edad);
+    this.matricula = matricula;
+  }
+
+  public void hablar() {
+    super.hablar();
+    System.out.println("Soy un Estudiante y mi número de matrícula es: " + this.matricula);
+  }
+}
+
+class Trabajador extends Persona {
+  public String empresa;
+
+  public Trabajador(String nombre, int edad, String empresa) {
+    super(nombre, edad);
+    this.empresa = empresa;
+  }
+
+  public void hablar() {
+    super.hablar();
+    System.out.println("Soy un Trabajador de " + this.empresa);
+  }
+}
+
+public class Main {
+  public static void main(String[] args) {
+    Persona estudiante = new Estudiante("Daniel", 23, "2014407002");
+    Trabajador trabajador = new Trabajador("Víctor", 21, "Google");
+    estudiante.hablar();
+    ((Persona)estudiante).hablar();
+    trabajador.hablar();
+    ((Persona)trabajador).hablar();
+  }
+}
+```
+
+@[1-13] (Definición de la *superclase* `Persona`.)
+@[10-12] (Implementación del método `hablar()`.)
+@[15-27] (Definición de la *subclase* `Estudiante`.)
+@[23.26] (Sobre-escritura del método `hablar()`.)
+@[29-41] (Definición de la *subclase* `Trabajador`.)
+@[37-40] (Sobre-escritura del método `hablar()`.)
+@[43-52] (Programa principal.)
+@[45] (Creación del objeto `estudiante`.)
+@[46] (Creación del objeto `trabajador`.)
+@[47] (Llamada al método `hablar()` de la clase `Estudiante`.)
+@[48] (También llama al método `hablar()` de la clase `Estudiante`.)
+@[49] (Llamada al método `hablar()` de la clase `Trabajador`.)
+@[50] (También llama al método `hablar()` de la clase `Trabajador`.)
