@@ -160,6 +160,17 @@ pay2 = compute_pay(50000.0, 0.19, 5)
 - **Paso por valor:** Comunmente, se pasa una copia del parámetro real, por lo cual, éste no es modificado por la función o procedimiento (sólo lectura).
 - **Paso por resultado:** En este caso, el parámetro real es el punto de salida de la función o procedimiento (sólo escritura).
 - **Paso por valor-resultado:** Combinación de las 2 anteriores, por lo cual los parámetros reales son de lectura y escritura.
+
+@ulend
+
+@fa[arrow-down]
+
++++
+
+### Métodos de Paso de Parámetros
+
+@ul
+
 - **Paso por referencia:** Similar al caso anterior, pero más eficiente en tiempo y espacio, ya que es pasada a la función o procedimiento una dirección de memoria.
 - **Paso por nombre:** En este caso, el parámetro formal es sustituido textualmente por el parámetro real.
 
@@ -179,7 +190,9 @@ void swap1 (int a, int b) {
 
 swap1(c,d)
 ```
+
 - Resultado:
+
 ```
 a = c
 b = d
@@ -228,16 +241,13 @@ swap3(c,d);
 ```
 
 - Resultado: 
+
 ```C
-addr_c = &c
-addr_d = &d
-a = *addr_c
-b = *addr_d
+addr_c = &c          |      a = b
+addr_d = &d          |     b = temp
+a = *addr_c          |     *addr_c = a
+b = *addr_d          |     *addr_d = b
 temp = a
-a = b
-b = temp
-*addr_c = a
-*addr_d = b
 ```
 
 @fa[arrow-down]
