@@ -12,7 +12,7 @@ Daniel Pavez - Victor Reyes
 
 - Permite la reutilización de código.
 - Se abstraen los detalles de implementación, lo que importa es que se hace, no el cómo.
-- Hace más fácil el poder entendre un programa, haciendo énfasis en su estructura lógica en vez de los detalles de implementación.
+- Hace más fácil el poder entender un programa, haciendo énfasis en su estructura lógica en vez de los detalles de implementación.
 
 @ulend
 
@@ -104,7 +104,7 @@ int addNumbers(int a, int b) { // parámetros formales
 
 @ul
 
-- Comunmente los parámetros son asignados según su posición (positional parameters).
+- Comúnmente los parámetros son asignados según su posición (positional parameters).
 - Con el uso de keyword parameters se puede decidir a que parámetro formal asignar un parámetro real.
 - Tienen como ventaja que se pueden asignar en cualquier orden, pero a cambio, el usuario del subprograma debe saber los nombres de los parámetros formales.
 
@@ -157,7 +157,7 @@ pay2 = compute_pay(50000.0, 0.19, 5)
 
 @ul
 
-- **Paso por valor:** Comunmente, se pasa una copia del parámetro real, por lo cual, éste no es modificado por la función o procedimiento (sólo lectura).
+- **Paso por valor:** Comúnmente, se pasa una copia del parámetro real, por lo cual, éste no es modificado por la función o procedimiento (sólo lectura).
 - **Paso por resultado:** En este caso, el parámetro real es el punto de salida de la función o procedimiento (sólo escritura).
 - **Paso por valor-resultado:** Combinación de las 2 anteriores, por lo cual los parámetros reales son de lectura y escritura.
 
@@ -301,7 +301,7 @@ a = a*2
 
 @ul
 
-- Son contextos de ejecución que existen concurrentemente, pero se ejecuta una a la vez, transfiriendose el control la una a la otra de manera explícita, por nombre.
+- Son contextos de ejecución que existen concurrentemente, pero se ejecuta una a la vez, transfiriéndose el control la una a la otra de manera explícita, por nombre.
 - Dado que son concurrentes, no pueden compartir el mismo stack.
 - Utilizadas para implementar iteradores y threads (hilos).
 
